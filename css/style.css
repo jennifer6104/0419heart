@@ -1,0 +1,125 @@
+.heart:before {
+	position: absolute;
+  content: "";
+  top: 0px;
+	width: 30vmin;
+	height: 30vmin;
+	background-color: red;
+	border-radius: 50%;
+  left: 15vmin;
+  animation-name:heartmove;
+  animation-duration:2s;
+  
+  animation-direction:alternate;
+}
+.heart {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: red;
+	height: 30vmin;
+	width: 30vmin;
+	transform: rotate(-45deg);
+  animation-name:heartmove;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+.heart:after {
+	content: "";
+	position: absolute;
+  top: -15vmin;
+  width: 30vmin;
+	height: 30vmin;
+	border-radius: 50%;
+	background-color: red;
+	left: 0;
+  animation-name:heartmove;
+  animation-duration:2s;
+ 
+  animation-direction:alternate;
+}
+@keyframes heartmove{
+  0%{
+    left:100px;
+    background:red;
+  }
+  25%{
+    background:red;
+  }
+  50%{
+    background:red;
+    transform:scale(2.25)rotate(-350deg);
+  }
+  100%{
+    left:300px;
+    background:red;
+  }
+}
+*{
+  padding:0px;
+  margin:0px;
+  box-sizing:border-box;
+}
+.box1{
+  position:relative;
+  top:100px;
+  left:100px;
+  width:50px;
+  height:50px;
+  background:#183;
+  animation-name:boxmove;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+@keyframes boxmove{
+  0%{
+    left:100px;
+    background:seagreen;
+  }
+  25%{
+    background:yellowgreen;
+  }
+  50%{
+    background:pink;
+    transform:scale(2.25)rotate(-350deg);
+  }
+  100%{
+    left:300px;
+    background:#f95;
+  }
+}
+.box2{
+  position:relative;
+  top:300px;
+  left:100px;
+  width:50px;
+  height:50px;
+  background:#183;
+  animation-name:box2move;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+@keyframes box2move{
+  0%{
+    left:100px;
+    background:#f95;
+  }
+  25%{
+    background:pink;
+  }
+  50%{
+    background:seagreen;
+    transform:scale(2.25)rotate(-350deg);
+  }
+  100%{
+    left:300px;
+    background:yellowgreen;
+  }
+}
